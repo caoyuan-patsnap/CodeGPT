@@ -129,7 +129,7 @@ var commitCmd = &cobra.Command{
 			out, err := util.GetTemplateByString(
 				prompt.SummarizeFileDiffTemplate,
 				util.Data{
-					"file_diffs": diff
+					"file_diffs": diff,
 				},
 			)
 			if err != nil {
