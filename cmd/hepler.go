@@ -7,7 +7,7 @@ import (
 	"github.com/caoyuan-patsnap/CodeGPT/openai"
 	"github.com/caoyuan-patsnap/CodeGPT/prompt"
 	"github.com/caoyuan-patsnap/CodeGPT/util"
-	"github.com/caoyuan-patsnap/com/file"
+	"github.com/appleboy/com/file"
 
 	"github.com/spf13/viper"
 )
