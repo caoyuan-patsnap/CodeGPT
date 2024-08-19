@@ -103,6 +103,7 @@ var commitCmd = &cobra.Command{
 		}
 
         issueId := viper.GetString("issue.id")
+        issueId1 := viper.GetString("issue_id")
 		currentModel := viper.GetString("openai.model")
 		color.Green("Summarize the commit message use " + currentModel + " model")
 
@@ -124,7 +125,8 @@ var commitCmd = &cobra.Command{
 				data[k] = v
 			}
 		}
-
+        color.Cyan("issue_id" + issueId)
+        color.Cyan("issue_id1" + issueId1)
 		// Get code review message from diff datas
 		if _, ok := data[prompt.SummarizeMessageKey]; !ok {
 			out, err := util.GetTemplateByString(
