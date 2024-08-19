@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/appleboy/CodeGPT/core"
-	"github.com/appleboy/CodeGPT/util"
+	"github.com/caoyuan-patsnap/CodeGPT/core"
+	"github.com/caoyuan-patsnap/CodeGPT/util"
 
 	"github.com/google/generative-ai-go/genai"
 	"google.golang.org/api/option"

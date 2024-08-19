@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/appleboy/CodeGPT/core"
+	"github.com/caoyuan-patsnap/CodeGPT/core"
 
 	openai "github.com/sashabaranov/go-openai"
 	"golang.org/x/net/proxy"

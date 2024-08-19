@@ -1,4 +1,4 @@
-module github.com/appleboy/CodeGPT
+module github.com/caoyuan-patsnap/CodeGPT
 
 go 1.21
 

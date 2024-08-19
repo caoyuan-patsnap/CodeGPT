@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/appleboy/CodeGPT/core"
-	"github.com/appleboy/CodeGPT/git"
-	"github.com/appleboy/CodeGPT/prompt"
-	"github.com/appleboy/CodeGPT/util"
+	"github.com/caoyuan-patsnap/CodeGPT/core"
+	"github.com/caoyuan-patsnap/CodeGPT/git"
+	"github.com/caoyuan-patsnap/CodeGPT/prompt"
+	"github.com/caoyuan-patsnap/CodeGPT/util"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/erikgeiser/promptkit/confirmation"

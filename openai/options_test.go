@@ -3,7 +3,7 @@ package openai
 import (
 	"testing"
 
-	"github.com/appleboy/CodeGPT/core"
+	"github.com/caoyuan-patsnap/CodeGPT/core"
 	openai "github.com/sashabaranov/go-openai"
 )
 
