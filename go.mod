@@ -3,8 +3,8 @@ module github.com/caoyuan-patsnap/CodeGPT
 go 1.21
 
 require (
-	github.com/appleboy/com v0.1.7
-	github.com/appleboy/graceful v1.1.1
+	github.com/caoyuan-patsnap/com v0.1.7
+	github.com/caoyuan-patsnap/graceful v1.1.1
 	github.com/charmbracelet/bubbles v0.18.0
 	github.com/charmbracelet/bubbletea v0.26.6
 	github.com/erikgeiser/promptkit v0.9.0

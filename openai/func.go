@@ -3,7 +3,7 @@ package openai
 import (
 	"encoding/json"
 
-	"github.com/appleboy/com/bytesconv"
+	"github.com/caoyuan-patsnap/com/bytesconv"
 	openai "github.com/sashabaranov/go-openai"
 	"github.com/sashabaranov/go-openai/jsonschema"
 )

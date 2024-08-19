@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/caoyuan-patsnap/CodeGPT/cmd"
 
-	"github.com/appleboy/graceful"
+	"github.com/caoyuan-patsnap/graceful"
 )
 
 func main() {

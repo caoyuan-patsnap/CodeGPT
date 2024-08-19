@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/caoyuan-patsnap/CodeGPT/util"
-	"github.com/appleboy/com/file"
+	"github.com/caoyuan-patsnap/com/file"
 )
 
 var excludeFromDiff = []string{
