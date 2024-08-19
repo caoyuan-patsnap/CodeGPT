@@ -32,6 +32,7 @@ var (
 	socksProxy     string
 	templateFile   string
 	templateString string
+	issueId string
 	commitAmend    bool
 	timeout        time.Duration
 	promptOnly     bool
@@ -56,6 +57,7 @@ func init() {
 	commitCmd.PersistentFlags().StringVar(&socksProxy, "socks", "", "socks proxy")
 	commitCmd.PersistentFlags().StringVar(&templateFile, "template_file", "", "git commit message file")
 	commitCmd.PersistentFlags().StringVar(&templateString, "template_string", "", "git commit message string")
+	commitCmd.PersistentFlags().StringVar(&issueId, "issue_id", "", "git commit issue id")
 	commitCmd.PersistentFlags().StringSliceVar(&templateVars, "template_vars", []string{}, "template variables")
 	commitCmd.PersistentFlags().StringVar(&templateVarsFile, "template_vars_file", "", "template variables file")
 	commitCmd.PersistentFlags().BoolVar(&commitAmend, "amend", false,
@@ -100,6 +102,7 @@ var commitCmd = &cobra.Command{
 			return err
 		}
 
+        issueId := viper.GetString("issue.id")
 		currentModel := viper.GetString("openai.model")
 		color.Green("Summarize the commit message use " + currentModel + " model")
 
@@ -127,6 +130,7 @@ var commitCmd = &cobra.Command{
 			out, err := util.GetTemplateByString(
 				prompt.SummarizeFileDiffTemplate,
 				util.Data{
+				    "issue_id": issueId,
 					"file_diffs": diff,
 				},
 			)

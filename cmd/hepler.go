@@ -55,6 +55,11 @@ func check() error {
 		viper.Set("git.template_string", templateString)
 	}
 
+	if issueId != "" {
+		viper.Set("issue.id", issueId)
+	}
+
+
 	// Check if the template file specified in the configuration exists
 	templateFile := viper.GetString("git.template_file")
 	if templateFile != "" && !file.IsFile(templateFile) {
