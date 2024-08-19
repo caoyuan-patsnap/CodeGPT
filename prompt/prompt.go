@@ -20,6 +20,7 @@ const (
 	SummarizePrefixKey         = "summarize_prefix"
 	SummarizeTitleKey          = "summarize_title"
 	SummarizeMessageKey        = "summarize_message"
+	IssueIdKey        = "issue_id"
 )
 
 // Initializes the prompt package by loading the templates from the embedded file system.

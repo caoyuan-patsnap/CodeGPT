@@ -103,7 +103,6 @@ var commitCmd = &cobra.Command{
 		}
 
         issueId := viper.GetString("issue.id")
-        issueId1 := viper.GetString("issue_id")
 		currentModel := viper.GetString("openai.model")
 		color.Green("Summarize the commit message use " + currentModel + " model")
 
@@ -125,15 +124,12 @@ var commitCmd = &cobra.Command{
 				data[k] = v
 			}
 		}
-        color.Cyan("issue_id" + issueId)
-        color.Cyan("issue_id1" + issueId1)
 		// Get code review message from diff datas
 		if _, ok := data[prompt.SummarizeMessageKey]; !ok {
 			out, err := util.GetTemplateByString(
 				prompt.SummarizeFileDiffTemplate,
 				util.Data{
-				    "issue_id": issueId,
-					"file_diffs": diff,
+					"file_diffs": diff
 				},
 			)
 			if err != nil {
@@ -188,6 +184,7 @@ var commitCmd = &cobra.Command{
 			// lowercase the first character of first word of the commit message and remove last period
 			summarizeTitle = strings.TrimRight(strings.ToLower(string(summarizeTitle[0]))+summarizeTitle[1:], ".")
 			data[prompt.SummarizeTitleKey] = strings.TrimSpace(summarizeTitle)
+			data[prompt.IssueIdKey] = issueId
 		}
 
 		if _, ok := data[prompt.SummarizePrefixKey]; !ok {
